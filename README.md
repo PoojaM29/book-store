@@ -58,6 +58,6 @@ Book Store requires
     - Block/Unblock user from commenting
     - Change unappropriate user avatars
 
-### Authors
+### Author
 
 * Pooja Mahadik
