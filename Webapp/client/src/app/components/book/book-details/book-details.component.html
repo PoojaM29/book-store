@@ -24,8 +24,8 @@
     </ng-template>
     <ng-template [ngIf]="isAdmin">
       <div id="admin-panel">
-        <a class="btn btn-warning" routerLink="/book/edit/{{book._id}}">Edit Book</a>
-        <a class="btn btn-danger" routerLink="/book/delete/{{book._id}}">Delete Book</a>
+        <a class="btn btn-warning" (click)="editBook(book._id)">Edit Book</a>
+        <a class="btn btn-danger" (click)="deleteBook(book._id)">Delete Book</a>
       </div>
     </ng-template>
     <ng-template [ngIf]="!isLogged">

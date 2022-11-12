@@ -9,6 +9,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 // Models
 import { Comment } from '../../models/comment.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-comment',
@@ -31,7 +32,8 @@ export class CommentComponent implements OnInit {
 
   constructor(
     private commentService: CommentService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private route:Router
   ) { }
 
   ngOnInit(): void {
@@ -131,6 +133,10 @@ export class CommentComponent implements OnInit {
       .subscribe(() => {
         this.comments = this.comments.filter(c => c._id !== delId);
       });
+  }
+
+  getUserName(username){
+    this.route.navigate(['/user/profile/'+username]);
   }
 
 }

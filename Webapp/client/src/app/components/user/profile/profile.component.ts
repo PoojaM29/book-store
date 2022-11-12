@@ -2,7 +2,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 // Router
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute , Router} from '@angular/router';
 
 // Forms
 import { FormGroup, FormControl, AbstractControl, Validators } from '@angular/forms';
@@ -37,6 +37,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private commentService: CommentService,
     private userService: UserService,
     private helperService: HelperService
@@ -114,6 +115,10 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   get avatar(): AbstractControl {
     return this.avatarForm.get('avatar');
+  }
+
+  showDetail(id){
+    this.router.navigate(['/book/details/'+id])
   }
 
 }

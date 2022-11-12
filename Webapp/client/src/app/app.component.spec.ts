@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { MyCommonModule } from './components/common/my-common.module';
 import { AppRoutingModule } from './app.routing.module';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/landing/home/home.component';
@@ -16,6 +16,7 @@ import { HomeComponent } from './components/landing/home/home.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas:[CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         AppComponent,
         HomeComponent

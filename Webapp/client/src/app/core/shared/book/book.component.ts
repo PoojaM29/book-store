@@ -1,6 +1,6 @@
 // Decorators
 import { Component, Input } from '@angular/core';
-
+import { Router } from '@angular/router';
 // Models
 import { Book } from '../../models/book.model';
 
@@ -11,4 +11,12 @@ import { Book } from '../../models/book.model';
 })
 export class BookComponent {
   @Input('book') book: Book;
+
+  constructor(private router: Router){
+    
+  }
+  showDetail(id) {
+    this.router.navigate([' /book/details/' + id])
+  }
+
 }

@@ -27,17 +27,17 @@ main {
 
 .form {
   position: relative;
-  width: 560px;
+  width: 500px;
   margin: 65px auto;
   padding: 50px 60px 70px 60px;
-  background-color: #D5C395;
+  background-color: white;
   border-radius: 15px;
 }
 
 .form h1 {
-  color: #927057;
+  color: #635792;
   font-family: 'Oxygen', sans-serif;
-  font-size: 40px;
+  font-size: 32px;
   margin-bottom: 40px;
   font-weight: bold;
 }
@@ -46,11 +46,11 @@ main {
   outline: none;
   border: none;
   width: 100%;
-  padding: 10px 10px 10px 60px;
+  padding: 10px 10px 10px 15px;
   margin-bottom: 30px;
   border-radius: 5px;
-  background: #EFE1C4;
-  color: #927057;
+  background:  #cac1ee;
+  color: black;
   font-size: 1.1em;
 }
 
@@ -61,15 +61,15 @@ main {
   max-width: 500px;
   padding: 10px;
   border-radius: 5px;
-  background: #927057;
-  color: #D5C395;
-  font-size: 1.5em;
-  font-weight: 900;
+  background: black;
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .submit:hover {
   cursor: pointer;
-  color: #FAE7B0;
+  color: white;
   box-shadow: 0 0 3px #FFF;
 }
 
@@ -81,7 +81,7 @@ main {
   position: absolute;
   top: 4px;
   left: 14px;
-  color: #927057;
+  color: #635792;
   font-size: 30px;
 }
 
@@ -90,13 +90,14 @@ main {
 }
 
 .input-error {
-  background-color: #C3002F;
+  color: #C3002F;
   font-size: 18px;
   font-weight: bold;
   padding: 15px;
   margin-top: -30px;
   margin-bottom: 5px;
   border-radius: 5px;
+  text-align: initial;
 }
 
 input:disabled, textarea:disabled {
@@ -104,7 +105,7 @@ input:disabled, textarea:disabled {
 }
 
 .submit:disabled, .delete-book {
-  background-color: #C3002F;
+  background-color: black;
 }
 
 /* Forms End */

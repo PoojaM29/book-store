@@ -15,13 +15,13 @@
 
     <div class="comment mb-2 row" *ngFor="let c of comments">
       <div class="comment-avatar col-md-1 col-sm-2 text-center pr-1">
-        <a routerLink="/user/profile/{{c.user.username}}">
+        <a (click)="getUserName(c.user.username)">
           <img class="mx-auto rounded-circle img-fluid" src="{{c.user.avatar}}" alt="avatar" />
         </a>
       </div>
       <div class="comment-content col-md-11 col-sm-10">
         <h6 class="small comment-meta">
-          <a routerLink="/user/profile/{{c.user.username}}">by {{c.user.username}}</a> {{c.creationDate | commentTime}} ago
+          <a  (click)="getUserName(c.user.username)" >by {{c.user.username}}</a> {{c.creationDate | commentTime}} ago
         </h6>
         <div class="comment-body">
           <p>{{c.content}}</p>

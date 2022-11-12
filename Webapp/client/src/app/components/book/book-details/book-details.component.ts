@@ -100,4 +100,12 @@ export class BookDetailsComponent implements OnInit {
     this.router.navigate(['/user/login']);
   }
 
+  editBook(id):void {
+    this.router.navigate(['/book/edit/'+id])
+  }
+
+  deleteBook(id):void {
+    this.router.navigate(['/book/delete/'+id])
+  }
+
 }
