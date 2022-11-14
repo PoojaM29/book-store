@@ -30,4 +30,24 @@ describe('NavigationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call logout', () => {
+    component.logout()
+  });
+
+  it('should call getCartSize', () => {
+    component.getCartSize()
+  });
+
+  it('should call getUsername', () => {
+    component.getUsername()
+  });
+
+  it('should call isUserAdmin', () => {
+    component.isUserAdmin()
+  });
+
+  it('should call onSubmit', () => {
+    component.onSubmit()
+  });
 });

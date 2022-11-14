@@ -16,7 +16,7 @@ export class BookComponent {
     
   }
   showDetail(id) {
-    this.router.navigate([' /book/details/' + id])
+    this.router.navigate(['/book/details/' + id])
   }
 
 }
