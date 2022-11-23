@@ -11,5 +11,7 @@ require('./config/database.config')(CONFIG[env]);
 require('./config/express')(APP);
 require('./config/routes')(APP);
 
-APP.listen(PORT);
+let server = APP.listen(PORT);
 console.log(`Server is listening on port ${PORT}`);
+
+module.exports = server;

@@ -1,3 +1,5 @@
+const { json } = require("express");
+
 const payload =
 {
     "author": "Brandon Sanderson",
@@ -18,11 +20,16 @@ const payload =
     "year": 2017
 }
 
-const res= {
-    status(res){
-          return res;
+const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiaWQiOiI2MzRlYzQ1NGQ2ZWJhMzcxNWFjYWQxNDIiLCJ1c2VybmFtZSI6ImFkbWluIiwiYXZhdGFyIjoiaHR0cHM6Ly9pLmltZ3VyLmNvbS80czVxTHpVLnBuZyIsImlzQ29tbWVudHNCbG9ja2VkIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJyb2xlcyI6WyI2MzRlYzQ1NGQ2ZWJhMzcxNWFjYWQxM2EiXX0sImlhdCI6MTY2ODc4MTI2NywiZXhwIjoyMjczNTgxMjY3fQ.2dGrxu5zBpSMsSaewYe-Xz7qFaQ_aCAyDnOk4DArw04";
+const res = {
+    status(res) {
+        return {
+            json() {
+                return res;
+            }
+        }
     }
-  }
+}
 
 
-  module.exports= { payload,res}
+module.exports = { payload, res ,token }
